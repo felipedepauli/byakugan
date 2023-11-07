@@ -1,0 +1,43 @@
+{
+	"train_dirs": [
+		"/data/train",
+		"dirTrain"
+	],
+	"test_disr": [
+		"/data/test",
+		"dirTest"
+	],
+
+    # Model configuration
+    "quantize": False,
+    "crop_size": [48,32],
+    "lr": 1e-5,
+	
+	# Train generator
+    "train_line_type": 2, #BOTH_LINE_TYPES
+    "train_batch_size": 8,
+    "train_use_da": True,
+    "train_shuffle_cache": 1000,
+    "train_background_prob": 0.0,
+    "train_adjust_to_model_ar": False,
+    "train_jitter_magnitude": 0.5,
+
+    # Test generator
+    "test_line_type": 2, #BOTH_LINE_TYPES
+    "test_batch_size": 1,
+    "test_use_da": False,
+    "test_shuffle_cache": 1000,
+    "test_background_prob": 0.0,
+    "test_adjust_to_model_ar": False,
+    "test_jitter_magnitude": 0.5,
+
+    # Train config
+    "train_epochs": 2000,
+
+    # Jidosha test config
+    "jidosha_replace_model_name": "jsegchars_001",
+    "jidosha_replace_model_path": "src/anpr/core/models/jsegchars",
+    "jidosha_test_on_db": "dirEcuador",
+    "jidosha_country": 218
+
+}
